@@ -1,0 +1,107 @@
+.form {
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  padding: 1em;
+  display: block;
+  margin: 0.75rem auto 0;
+}
+.label,
+.input {
+  display: block;
+}
+
+.label {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.input {
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  padding: 0.25rem;
+  width: 100%;
+}
+
+.button {
+  background: darkblue;
+  border: 1px solid darkblue;
+  border-radius: 0.25rem;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-size: 1.25rem;
+  padding: 0.5rem 1.25rem;
+  transition: background 500ms ease-in color 500ms ease-in;
+}
+.button:hover {
+  background: lightblue;
+  border: 1px solid lightblue;
+  color: #333;
+}
+.button.centered {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+}
+
+.form.pending {
+  position: relative;
+}
+
+.form.pending::before {
+  background: white;
+  border-radius: 0.25rem;
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+}
+/*
+.form.pending::after {
+  background: radial-gradient(rgba(0, 50, 255, 0), rgba(0, 50, 255, 0.75));
+  border-radius: 50%;
+  content: '';
+  height: 6rem;
+  width: 6rem;
+  position: absolute;
+  left: calc(50% - 3rem);
+  top: calc(50% - 3rem);
+  animation: loading 1s infinite ease-out;
+}
+
+@keyframes loading {
+  from {
+    opacity: 1;
+    transfrom: scale(0.001);
+    background-color: lightblue;
+  }
+  to {
+    opacity: 0;
+    transform: scale(2);
+    background-color: red;
+  }
+}
+*/
+.success,
+.error {
+  border-radius: 0.25rem;
+  display: block;
+  margin: 0.75rem auto 0;
+  max-width: 500px;
+  text-align: center;
+}
+.error {
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid red;
+  padding: 1rem;
+}
+.success {
+  background: rgba(0, 255, 0, 0.1);
+  border: 1px solid green;
+  padding: 2rem;
+}
