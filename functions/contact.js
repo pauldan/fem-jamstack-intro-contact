@@ -7,7 +7,7 @@ exports.handler = async (event, _context, callback) => {
       from: 'contact@form.abc',
       to: 'email@form.abc',
       subject: email.subject,
-      html: emailTemplate(body),
+      html: emailTemplate(email),
     });
     callback(null, {
       statusCode: 200,
